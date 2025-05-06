@@ -1,0 +1,54 @@
+
+
+CREATE DATABASE company
+  ON 
+    PRIMARY 
+      (NAME=pri1_dat,
+       FILENAME='D:\testdate\date01\pri1dat.mdf',
+       SIZE=1,
+       MAXSIZE=50,
+       FILEGROwTH=15%
+       ),
+      (NAME=pri2_dat,
+       FILENAME='D:\testdate\date01\pri2dt.ndf',
+       SIZE=1,
+       MAXSIZE=50,
+       FILEGROwTH=15%
+       ),
+    FILEGROUP ComGroup1
+      (NAME=Grp1fi1_dat,
+       FILENAME='D:\testdate\date01\G1fi1dt.ndf',
+       SIZE=1,
+       MAXSIZE=50,
+       FILEGROwTH=5
+       ),
+      (NAME=Grp1fi2_dat,
+       FILENAME='D:\testdate\date01\G1fi2dt.ndf',
+       SIZE=1,
+       MAXSIZE=50,
+       FILEGROwTH=5
+       ),
+    FILEGROUP ComGroup2
+      (NAME=Grp2fi1_dat,
+       FILENAME='D:\testdate\date01\G2fi1dt.ndf',
+       SIZE=1,
+       MAXSIZE=50,
+       FILEGROwTH=5
+       ),
+      (NAME=Grp2fi2_dat,
+       FILENAME='D:\testdate\date01\G2fi2dt.ndf',
+       SIZE=1,
+       MAXSIZE=50,
+       FILEGROwTH=5
+       )
+  LOG ON 
+    (NAME=company_log,
+     FILENAME='D:\testdate\date01\comlog.ldf',
+     SIZE=512KB,
+     MAXSIZE=25,
+     FILEGROwTH=5
+     )
+ go
+
+
+
