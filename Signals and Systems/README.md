@@ -48,7 +48,6 @@ Kap.1-2: Basic
 > (是充分不必要条件)\\
 > \text{Gibbs phenomenen: 方波(略)}
 > $$
-> 
 
 > 3.5:
 >
@@ -138,6 +137,6 @@ Kap.1-2: Basic
 > p
 > $$
 
-
-
 Kap.6-11: ?
+
+test: $\text{TEST}$
