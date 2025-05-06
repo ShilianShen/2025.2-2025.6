@@ -37,6 +37,8 @@ Kap.1-2: Basic
 
 > 3.4:
 >
+> <div>
+>
 > $$
 > \text{Dirichlet}条件:\\
 > \begin{cases}
@@ -48,6 +50,7 @@ Kap.1-2: Basic
 > (是充分不必要条件)\\
 > \text{Gibbs phenomenen: 方波(略)}
 > $$
+> </div>
 
 > 3.5:
 >
