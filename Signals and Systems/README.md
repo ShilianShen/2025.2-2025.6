@@ -40,9 +40,9 @@ Kap.1-2: Basic
 > $$
 > \text{Dirichlet}条件:\\
 > \begin{cases}
-> 1. & 周期内, 绝对可积(absolutely\ integrable).\Leftrightarrow\int_T|x(t)|dt<\infty\\
-> 2. & 周期内, 有限个最大值和最小值.\\
-> 3. & 周期内, 有限个第一类间断点, 并且|x(间断点)|<\infty.
+> 1 & 周期内, 绝对可积(absolutely\ integrable).\Leftrightarrow\int_T|x(t)|dt<\infty\\
+> 2 & 周期内, 有限个最大值和最小值.\\
+> 3 & 周期内, 有限个第一类间断点, 并且|x(间断点)|<\infty.
 > \end{cases}\\
 > 连续周期信号x满足\text{Dirichlet}条件\Rightarrow x的\text{Fourier series}收敛\\
 > (是充分不必要条件)\\
