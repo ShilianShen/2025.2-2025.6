@@ -1,10 +1,10 @@
 # Signals and Systems
 
-Kap.1-2: Basic
+> 1: 略
 
-## Kap.3-5: Fourier
+> 2: 略
 
-### 浓缩版
+## Kap.3
 
 > 3.0-1: 略
 
@@ -86,6 +86,8 @@ Kap.1-2: Basic
 
 > 3.9-12: 略
 
+## Kap.4
+
 > 4.0: 略
 
 > 4.1:
@@ -124,19 +126,104 @@ Kap.1-2: Basic
 
 > 4.6-8: 略
 
-> 7.0:
+## Kap.5
+
+## Kap.6
+
+## Kap.7
+
+> 7.0: 引言
 >
 > $$
 > 样本(\text{sample})\\
 > 采样定理(\text{sampling thoerem})\\
 > $$
 
-> 7.1
+> 7.1: 采样定理
+>
+> 冲击串采样
 >
 > $$
-> p
+> \begin{aligned}
+> 冲击串采样(\text{impluse-train sampling})\\
+> \text{s代表sampling}\\
+> \end{aligned}
+>
+> \begin{cases}
+> 采样函数(\text{sampling function}) & p(t)=\sum_{n\in\mathbb{Z}}\delta(t-nT_s)\\
+> 采样周期(\text{sampling period}) & T_s\\
+> 采样频率(\text{sampling frequency}) & \omega_s = \frac{2\pi}{T_s}\\
+> \end{cases}
+> $$
+>
+> 采样定理的动机
+>
+> $$
+> 已知x(t)是带限信号, 即\exist \omega_M>0使|\omega|>\omega_M\Rightarrow X(j\omega)=0,\\
+> x_p(t)=x(t)p(t),要使\forall f\in [-\omega_M, \omega_M]有X_p(j\omega)=X(j\omega), 求\omega_s的取值范围.\\
+> 结论:\omega_s>2\omega_M
+> \begin{cases}
+> 奈奎斯特率 & 2\omega_M \\
+> 奈奎斯特频率 & \omega_M \\
+> \end{cases}
+> $$
+>
+> 采样定理的推导
+>
+> $$
+> p(t)=\sum_{n\in\mathbb{Z}}\delta(t-nT_s)\Rightarrow a_k=\frac{1}{T_s}\Rightarrow P(j\omega)=\frac{2\pi}{T_s}\sum_{k\in\mathbb{Z}}\delta(\omega-k\omega_s)\\
+>
+> \begin{aligned}
+> X_p(j\omega)
+> &=\frac{1}{2\pi}X(j\omega)*P(j\omega)\\
+> &=\frac{1}{T_s}\sum_{k\in\mathbb{Z}}X(j\omega)*\delta(\omega-k\omega_s)\\
+> &=\frac{1}{T_s}\sum_{k\in\mathbb{Z}}X(j(\omega-k\omega_s))\\
+> \end{aligned}\\
+>
+> \begin{cases}
+> X_p(j\omega)=\frac{1}{T_s}\sum_{k\in\mathbb{Z}}X(j(\omega-k\omega_s))\\
+> X_p(j\omega)_{[-\omega_M, \omega_M]}=\frac{1}{T_s}X(j\omega)\\
+> \end{cases}
+> \Rightarrow \omega_s> 2\omega_M
+> $$
+>
+> 零阶保持采样: 略
+
+> 7.2: 重建信号
+>
+> $$
+> 线性内插/一阶保持(\text{linear interpolation})\\
+> 带限内插(\text{band-limited interpolation})\\
+> 高阶保持(\text{higher order hold})
 > $$
 
+> 7.3: 欠采样
+>
+> $$
+> 混叠(\text{aliasing})
+> $$
+
+> 7.4: 离散处理
+>
+> $$
+> 连续时间到离散时间的转换(\text{continuous-to-discrete time conversion, C/D})\\
+> 离散时间到连续时间的转换(\text{discrete-to-continuous time conversion, D/C})\\
+> 模拟-数字(\text{analog-to-digital, A/D})转换器\\
+> 数字-模拟(\text{digital-to-analog, D/A})转换器\\
+> $$
+
+> 7.5: 略
+
+HW: 7.2, 7.6, 7.9, 7.22
+
 Kap.6-11: ?
+
+## Kap.8
+
+## Kap.9
+
+## Kap.10
+
+## Kap.11
 
 test: $\text{TEST}$
