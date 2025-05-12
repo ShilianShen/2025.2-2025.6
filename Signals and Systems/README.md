@@ -130,6 +130,69 @@
 
 ## Kap.6
 
+> 6.0
+
+> 6,1
+
+> 6.2: LTI的模&相
+>
+> $$
+> \begin{cases}
+> |H(j\omega)| & 增益(\text{gain}) \\
+> \angle H(j\omega) & 相移(\text{phase shift})\\
+> \end{cases}\\
+> 失真\text{distortion}
+> $$
+>
+> (非)线性相位
+>
+> $$
+> 全通(\text{all-pass}):|H(j\omega)|=1\\
+> 群时延(\text{group delay}): \tau(\omega)=-\frac{d}{d\omega}\angle H(j\omega)\\
+> 主值相位(\text{principal-phase})\\
+> 弥散(\text{dispersion}):\tau(\omega)\neq C\\
+> $$
+>
+> 对数模和相位图
+>
+> $$
+> 伯德图(\text{Bode}):
+> \begin{cases}
+> 20\log_{10}|H(j\omega)|-\log_{10}\omega\\
+> \angle|H(j\omega)|-\log_{10}\omega\\
+> \end{cases}\\
+> $$
+
+> 6.3: 理想滤波器
+>
+> $$
+> H(j\omega)=
+> \begin{cases}
+> 1 & |\omega|\le\omega_c\\
+> 0 & |\omega|>\omega_c\\
+> \end{cases}\\
+>
+> H(e^{j\omega})=
+> \begin{cases}
+> 1 & |\omega|\le\omega_c\\
+> 0 & \omega_c<|\omega|\le\pi\\
+> \end{cases}\\
+>
+> 上升时间(\text{rise time})\\
+> $$
+
+> 6.4: 非理想滤波器
+
+> 6.5: 一/二阶连续时间系统
+
+> 6.6: 一/二阶离散时间系统
+
+> 6.7-8: 略
+
+
+
+HW: 6.5, 6.23, 6.27
+
 ## Kap.7
 
 > 7.0: 引言
