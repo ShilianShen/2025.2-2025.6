@@ -189,8 +189,6 @@
 
 > 6.7-8: 略
 
-
-
 HW: 6.5, 6.23, 6.27
 
 ## Kap.7
@@ -286,6 +284,20 @@ Kap.6-11: ?
 ## Kap.9
 
 ## Kap.10
+
+$$
+H(j\omega)=\frac{a-j\omega}{a+j\omega}\\
+\begin{aligned}
+\mathcal{F}^{-1}\{H(j\omega)\}
+&=\mathcal{F}^{-1}\{a-j\omega\}*\mathcal{F}^{-1}\{\frac{1}{a+j\omega}\}\\
+&=[a\delta(t)-\frac{d}{dt}\delta(t)]*[e^{-at}u(t)]\\
+&=a\delta(t)*[e^{-at}u(t)]-\frac{d}{dt}\delta(t)*[e^{-at}u(t)]\\
+&=[ae^{-at}u(t)]-[e^{-at}\delta(t)-ae^{-at}u(t)]\\
+&=2ae^{-at}u(t)-e^{-at}\delta(t)
+\end{aligned}\\
+\ \\
+y(t)=\sum H(j\omega)e^{j\omega t}
+$$
 
 ## Kap.11
 
