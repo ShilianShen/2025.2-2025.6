@@ -82,3 +82,56 @@
 >
 > 定义T4: X为T4 <=> X为T1, X为正规.
 >
+> 命题: X正则 <=> $\forall x\in X, \forall U\in\mathcal{N}(x), \exist F为闭集使x\in F^\circ\subset F\subset U$ <=> $\forall x\in X, \forall U\in\mathcal{N}(x), \exist V为开集使x\in V\subset \overline{V}\subset U$.
+>
+> 推论: T3 => T2
+>
+> 命题: X正规 <=> $\forall U, F$分别为$X$的开集闭集, 使$F\subset U$, $\exist V$为开集使$F\subset V\subset\overline{V}\subset U$.
+>
+> 定理: 紧Hausdorff是T4, 紧正则是正规.
+>
+> 定理: 度量空间正规, 欧氏空间R^N正规.
+>
+> 引理: 略
+>
+> noname: T4 => T3 => T2 => T1 => T0
+>
+> ?定义第一纲集: A为X的第一纲集 <=> A可以表示为可数个X的无处稠的并.
+>
+> ?定义第二纲集: A为X的第二纲集 <=> A不可以表示为可数个X的无处稠的并.
+>
+> 定义Baire空间: X是Baire空间 <=> 可数个开的稠子集的交是稠子集.
+>
+> 命题: X是Baire <=> $\forall\{A_n\}_{n\in\mathbb{N}}$为无处稠子集族, 使$(\cup_{n\in\mathbb{N}}A_n)^\circ=\empty$ <=> X的非空开集都是X的第二纲集.
+>
+> 命题: Baire是开遗传性质.
+>
+> 定理: 紧Hausdorff => Baire空间.
+
+6.1
+
+> 定义初始拓扑/弱拓扑: $(X, \mathcal{O})$为$(Y_i, f_i)_{i\in I}$生成的初始拓扑/弱拓扑 <=> $\mathcal{O}$是使$f_i$连续的最粗的拓扑.
+>
+> 命题: $\mathcal{O}$是$(Y_i, f_i)_{i\in I}$生成的初始拓扑 => $h:Z\rightarrow X$连续$\Leftrightarrow\forall i\in I$有$f_i\circ h:Z\rightarrow Y_i$连续.
+>
+> 命题: $\mathcal{O}$是$(Y_i, f_i)_{i\in I}$生成的初始拓扑:
+>
+> $\xi$收敛于$x$ <=> $\forall i\in I, f_i\circ\xi $收敛$f_i(x)$.
+>
+> 定义乘积空间: $X_1\times X_2$为$X_1,X_2$的乘积空间 <=> $X_1\times X_2$的拓扑为$p_i((\cdots, x_i,\cdots))=x_i$生成的初始拓扑.
+>
+> 自证: ...
+>
+> 命题: X为Hausdorff <=> $X\times X$的对角线$\{(x, x)|x\in X\}$为闭集.
+>
+> 命题: $X_1, X_2$紧 => $X_1\times X_2$紧
+>
+> Kuratowski定理: 拓扑空间X是紧空间 <=> $\forall Y, p_Y:X\times Y\rightarrow Y$是闭映射.
+>
+> ...
+
+6.2
+
+6.3
+
+> 定义商映射: f: X Y满射是商映射 <=> $\forall V$是Y的开集有$f^{-1}(V)$是X的开集.
