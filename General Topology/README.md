@@ -1,5 +1,20 @@
 # General Topology
 
+ID: 201085030
+
+中文: 一般拓扑学
+
+Eng: General Topology
+
+老师: 张德学, QQ: 1965605513
+
+助教: 孟一凡, QQ: 1258091862
+
+电子书: 张德学, 一般拓扑学基础, 四川大学自编讲义. 熊金城, 点集拓扑讲义, 高等教育出版社, 2003年12月第3版.
+
+(只覆盖课程要求的部分)
+
+
 5.1
 
 > 定义紧子集: $X$为拓扑空间, $A\subset X$, 若对$\forall\mathcal{U}$使$A\subset\cup\mathcal{U}$, $\exist\{U_i|U\in\mathcal{U}\}_n$使$A\subset\cup_i^n{U_i}$, 则$A$为$X$的紧子集.
@@ -135,3 +150,45 @@
 6.3
 
 > 定义商映射: f: X Y满射是商映射 <=> $\forall V$是Y的开集有$f^{-1}(V)$是X的开集.
+
+## Kap.7
+
+### 7.1
+
+Def. 7.1.1 连通: $拓扑空间X连通 \Leftrightarrow X\neq\empty, \forall F, G为闭集$
+
+Prop. 7.1.1: 以下等价
+
+> 1. $X连通$
+> 2. $\forall 开集U,V无法划分X$
+> 3. $开闭集只有\empty, X$
+> 4. $\forall连续f:X\to 离散空间, 有f为常值映射$
+> 5. $\forall连续f:X\to\{0,1\}, 有f为常值映射$
+
+Cor. 7.1.1: 连通空间的连续像连通, 连通是拓扑性质.
+
+Cor. 7.1.2: $A是X的连通子集, A\subset B\subset\overline{A}\Rightarrow B连通$
+
+Cor. 7.1.3: $\{A_i\}_{i\in I}是连通子集族\cap_{i\in I}A_i\neq\empty\Rightarrow \cup_{i\in I}A_i连通$
+
+Prop. 7.1.2: $\mathbb{R}的子集X连通\Leftrightarrow \overline{X}=[a,b],X^\circ=(a,b)$
+
+Cor. 7.1.4连续函数介值定理:
+
+Thm. 7.1.1:
+
+Def. ?. 连通分支:
+
+Prop. 7.1.3:
+
+Def 7.1.2 局部连通: $拓扑空间X局部连通\Leftrightarrow \forall x\in X,\forallU\in\mathcal{N}(x),\exist连通子集K使x\in K^\circ\subset K\subset U$
+
+Prop. 7.1.4: 以下等价
+
+1. X局部连通
+2. $\forall X的开子空间的连通分支,是X的开集$
+
+
+
+
+### 7.2
