@@ -14,6 +14,12 @@ Eng: Complex functions & Integral calculus conversion
 
 (只覆盖课程要求的部分)
 
+* [ ]  内部优化
+* [ ]  PPT对照
+* [ ]  书包习题
+* [ ]  小测&作业
+* [ ]  历史题库
+
 ## Ch. 0
 
 默认声明
@@ -27,11 +33,11 @@ v=v(x,y)=\mathcal{Im}\{f(z)\} \\
 \end{cases}
 $$
 
-## Ch. 1
+## Ch. 1 复数
 
 ...
 
-## Ch. 2
+## Ch. 2 解析
 
 ### 2.1
 
@@ -40,7 +46,6 @@ $$
 定义函数的极限: ...
 
 定义函数的连续: $f$在$z_0$处连续 <=> $\forall\epsilon\exist\delta$使$|z-z_0|<\delta\Rightarrow|f(z)-f(z_0)|<\epsilon$ <=> $\lim_{z\rightarrow z_0}f(z)=f(z_0)$.
-
 
 ### 2.2
 
@@ -66,7 +71,6 @@ $$
 
 定理: f在D内解析 <=> u, v是D内的共轭调和函数
 
-
 ### 2.3
 
 以下函数解析:
@@ -74,7 +78,7 @@ $$
 $w=e^z, w=z^n, w=Ln(z)$.
 
 
-## Ch. 3
+## Ch. 3 积分
 
 ### 3.1
 
@@ -94,7 +98,6 @@ $w=e^z, w=z^n, w=Ln(z)$.
 
 大圆弧引理: $\lim_{z\rightarrow \infty}zf(z)=\lambda\Rightarrow \lim_{\rho\rightarrow\infty}\int_{S_\rho}f(z)dz=i\lambda(\beta-\alpha)$.
 
-
 ### 3.2
 
 Cauchy积分定理: f在D的内部上解析, 在D的边界上连续, 则\oint f = 0
@@ -109,8 +112,7 @@ Cauchy不等式
 
 刘维尔定理:...
 
-
-## Ch. 4
+## Ch. 4 幂级数
 
 ### 4.1
 
@@ -128,7 +130,6 @@ $\sum_{n=1}^\infty z_n收敛 \xLeftrightarrow\text{Thm. 4.2} \sum_{n=1}^\infty x
 
 $\sum_{n=1}^\infty z_n绝对收敛 \xRightarrow\text{Thm. 4.4} \sum_{n=1}^\infty z_n收敛 \xRightarrow\text{Thm. 4.3} \{z_n\}收敛$.
 
-
 ### 4.2
 
 定义(0)复变函数项级数: 略.
@@ -137,12 +138,11 @@ $\sum_{n=1}^\infty z_n绝对收敛 \xRightarrow\text{Thm. 4.4} \sum_{n=1}^\infty
 
 定义(0)收敛半径: 略
 
-$\sum_{n=0}^\infty C_n(z-z_0)^n在z_1收敛 \xLeftrightarrow[\text{Thm. 4.5}]\text{Abel} \sum_{n=0}^\infty C_n(z-z_0)^n在|z-z_0|<|z_1-z_0|收敛$.
+$\sum_{n=0}^\infty C_n(z-z_0)^n在z_1收敛 \xRightarrow[\text{Thm. 4.5}]\text{Abel} \sum_{n=0}^\infty C_n(z-z_0)^n在|z-z_0|<|z_1-z_0|绝对收敛$.
 
-$\sum_{n=0}^\infty C_n(z-z_0)^n在z_2发散 \xLeftrightarrow\text{Cor. 0} \sum_{n=0}^\infty C_n(z-z_0)^n在|z-z_0|>|z_2-z_0|发散$.
+$\sum_{n=0}^\infty C_n(z-z_0)^n在z_2发散 \xRightarrow\text{Cor. 0} \sum_{n=0}^\infty C_n(z-z_0)^n在|z-z_0|>|z_2-z_0|发散$.
 
 方法(0): 比值法 & 根植法: 略
-
 
 ### 4.3
 
@@ -152,15 +152,13 @@ Taylor定理(4.6): $f(z)$在区域$D$内解析, $z_0\in D$, $R=\inf_{z\in\partia
 
 结论(4.6.0): f(z)在z_0解析 <=> f(z)在z_0的某邻域可展开为幂级数.
 
-
 ### 4.4
 
 Laurent定理(4.7): f(z)在R_1 < |z-z_0| < R_2内解析, 则一定能展开为: $f(z)=\sum_{n=-\infty}^\infty\frac{f^{(n)}(z)}{n!}(z-z_0)^n$.
 
 ?定义(0)Laurent展开式/级数: 略
 
-
-## Ch. 5
+## Ch. 5 留数
 
 ### 5.1
 
@@ -188,7 +186,6 @@ Laurent定理(4.7): f(z)在R_1 < |z-z_0| < R_2内解析, 则一定能展开为: 
 
 定理(5.5): $z_0$为$f(z)$的$m$阶零点 <=> $z_0$为$\frac{1}{f(z)}$的$m$阶极点.
 
-
 ### 5.2
 
 Def. 5.4 留数: $f(z)在z_0处的留数为\text{Res}[f(z), z_0]=C_{-1}$.
@@ -205,10 +202,9 @@ Def. 5.5 无穷远点的留数: $\text{Res}[f(z),\infty]=\frac{1}{2\pi i}\oint_{
 
 Thm. 5.8 留数和定理: $f(z)在\mathbb{C}上有有限个孤立奇点(包括\infty)\xRightarrow\text{Thm. 5.8} \sum_i\text{Res}[f(z),z_i]=0$.
 
-
 ### 5.3
 
-Thm. 5.9 Jordan引理: 
+Thm. 5.9 Jordan引理:
 
 $$
 f(z)在\begin{cases}
@@ -219,13 +215,11 @@ f(z)在\begin{cases}
 \forall a>0有\lim_{R\rightarrow+\infty}\int_{C_R}f(z)e_{iaz}dz=0\\
 $$
 
-
 ### 5.4
 
 略
 
-
-## Ch. 8
+## Ch. 8 Fourier
 
 ### 8.1&2&3
 
@@ -233,8 +227,7 @@ Thm. 8.1: $f_T:\mathbb{R}\to\mathbb{R}为周期为T的函数, 在[-\frac{T}{2},\
 
 略
 
-
-## Ch. 9
+## Ch. 9 Laplace
 
 ### 9.1
 
@@ -248,11 +241,9 @@ $f(t)为F(s)的\text{Laplace}逆变换\xLeftrightarrow\text{Def. 9.1}f(t)=\mathc
 
 $c为f(t)的增长指数\xLeftrightarrow\text{Def. 0}\exist M>0使\forall t\in[0,+\infty)有|f(t)|\le Me^{ct}$.
 
-
 Thm.
 
 $f(t)在[0,+\infty)上分段连续, \exist c为f(t)的增长指数\xRightarrow\text{Thm. 9.1}F(s)在\mathcal{Re}\{s\}>c上存在且解析$.
-
 
 ### 9.2
 
@@ -276,6 +267,5 @@ $f(t)在[0,+\infty)上分段连续, \exist c为f(t)的增长指数\xRightarrow\t
 ### 9.3
 
 Thm. 9.2: $F(s)在\mathcal{Re}\{s\}\le 内有的限个孤立奇点外解析,\lim_{s\rightarrow\infty}F(s)=0\xRightarrow\text{Thm. 9.2}f(t)=\sum_k\text{Res}[F(s)e^{st}, s_k],t>0$.
-
 
 ### 9.4
