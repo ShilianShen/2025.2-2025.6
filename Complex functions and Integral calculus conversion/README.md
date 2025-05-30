@@ -14,10 +14,7 @@ Eng: Complex functions & Integral calculus conversion
 
 (只覆盖课程要求的部分)
 
-* [ ]  内部优化
-* [ ]  PPT对照
-* [ ]  书包习题
-* [ ]  小测&作业
+* [ ]  小测
 * [ ]  历史题库
 
 ## Ch. 0
@@ -30,6 +27,11 @@ x=\mathcal{Re}\{z\} \\
 y=\mathcal{Im}\{z\} \\
 u=u(x,y)=\mathcal{Re}\{f(z)\} \\
 v=v(x,y)=\mathcal{Im}\{f(z)\} \\
+C_n为幂级数的第n个系数 \\
+\infty\notin\mathbb{C}\\
+\infty的情况需要特别声明出来\\
+无索引\text{Def.}和\text{Thm.}默认使用0\\
+有名\text{Thm.}会声明\\
 \end{cases}
 $$
 
@@ -38,6 +40,11 @@ $$
 ...
 
 ## Ch. 2 解析
+
+* [ ]  内部优化
+* [ ]  PPT对照
+* [ ]  书习题
+* [ ]  作业 
 
 ### 2.1
 
@@ -77,8 +84,12 @@ $$
 
 $w=e^z, w=z^n, w=Ln(z)$.
 
-
 ## Ch. 3 积分
+
+* [ ]  内部优化
+* [ ]  PPT对照
+* [ ]  书习题
+* [ ]  作业 
 
 ### 3.1
 
@@ -113,6 +124,11 @@ Cauchy不等式
 刘维尔定理:...
 
 ## Ch. 4 幂级数
+
+* [ ]  内部优化
+* [ ]  PPT对照
+* [ ]  书习题
+* [ ]  作业 
 
 ### 4.1
 
@@ -160,47 +176,77 @@ Laurent定理(4.7): f(z)在R_1 < |z-z_0| < R_2内解析, 则一定能展开为: 
 
 ## Ch. 5 留数
 
+* [X]  内部优化
+* [X]  PPT对照
+* [X]  书习题
+* [X]  作业
+
 ### 5.1
 
-定义(5.1)孤立奇点: $z_0为f(z)的孤立奇点z_0\xLeftrightarrow\text{Def. 5.1} 为f(z)的奇点, \exist U\in\mathcal{N_o(z)}使f(z)在U上处处解析$
+#### Def.
 
-定义(0)可去奇点: Laurent级数的Cn: n<0, Cn=0.
+$z_0\in\mathbb{C}为f(z)的孤立奇点\xLeftrightarrow\text{Def. 5.1} 为f(z)的奇点, \exist U\in\mathcal{N_o(z)}使f(z)在U上处处解析$.
 
-定义(0)极点: Laurent级数的Cn: Cn!=0有有限个且不为0个.
+$$
+z_0\in\mathbb{C}为f(z)的孤立奇点:
+\begin{cases}
+z_0为f(z)的可去奇点 &\xLeftrightarrow\text{Def. 0}n<0则C_n=0\\
+z_0为f(z)的m阶极点 &\xLeftrightarrow\text{Def. 0}m为最小,使n<-m则C_n=0(m=1称为简单极点)\\
+z_0为f(z)的本性奇点 &\xLeftrightarrow\text{Def. 0}\nexists m\in\mathbb{Z}使n<m则C_n=0\\
+\end{cases}
+$$
 
-定义(0)m阶极点: 略.
+$z_0\in\mathbb{C}为f(z)的m阶零点\xLeftrightarrow\text{Def. 5.2}\phi(z):=f(z)(z-z_0)^{-m}, \phi(z)在z_0解析, \phi(z_0)\neq 0, \infty$.
 
-定义(0)本性奇点: Laurent级数的Cn: Cn!=0有无限个.
+$z_0=\infty为为f(z)的孤立奇点\xLeftrightarrow\text{Def. 5.3} \exists R\in\mathbb{R}_+使f(z)在\{z,|z|\in(R,\infty)\}上处处解析$.
 
-定理(5.1): $z_0$为$f(z)$的孤立奇点: $z_0$为$f(z)$的可去奇点 <=> $\lim_{z\rightarrow z_0}f(z)=C_0\neq\infty$.
+$$
+z_0=\infty为f(z)的孤立奇点:
+\begin{cases}
+z_0为f(z)的可去奇点 &\xLeftrightarrow\text{Def. 0}n>0则C_n=0\\
+z_0为f(z)的m阶极点 &\xLeftrightarrow\text{Def. 0}m为最小,使n>m则C_n=0\\
+z_0为f(z)的本性奇点 &\xLeftrightarrow\text{Def. 0}\nexists m\in\mathbb{Z}使n>m则C_n=0\\
+\end{cases}
+$$
 
-定理(5.1'): $z_0$为$f(z)$的孤立奇点: $z_0$为$f(z)$的可去奇点 <=> f(z)在某邻域内有界.
+#### Thm.
 
-定理(5.2): $z_0$为$f(z)$的孤立奇点: $z_0$为$f(z)$的极点 <=> $\lim_{z\rightarrow z_0}f(z)=\infty$.
+$$
+z_0为f(z)的孤立奇点: 
+\begin{cases}
+z_0为f(z)的可去奇点&\xLeftrightarrow\text{Thm. 5.1}\lim_{z\rightarrow z_0}f(z)=C_0\neq\infty\\
+z_0为f(z)的可去奇点&\xLeftrightarrow\text{Thm. 5.1'}f(z)在某邻域内有界\\
+z_0为f(z)的极点&\xLeftrightarrow\text{Thm. 5.2}\lim_{z\rightarrow z_0}f(z)=\infty\\
+z_0为f(z)的本性奇点&\xLeftrightarrow\text{Thm. 5.3}\nexists\lim_{z\rightarrow z_0}f(z)\neq\infty\\
 
-定理(5.3): $z_0$为$f(z)$的孤立奇点: $z_0$为$f(z)$的本性奇点 <=> $\lim_{z\rightarrow z_0}f(z)不存在$.
+\end{cases}
+$$
 
-定义(5.2)m阶零点: 略.
+$z_0为m阶零点\xLeftrightarrow\text{Thm. 5.4}n\in\mathbb{Z}[0,m),f^{(n)}(z_0)=0,f^{(m)}(z_0)\neq0$.
 
-定理(5.4): z_0为m阶零点 <=> $f^{(n)}(z_0)=0,n\in\mathbb{Z}\cap[0,m),f^{(m)}(z_0)\neq0$
-
-定理(5.5): $z_0$为$f(z)$的$m$阶零点 <=> $z_0$为$\frac{1}{f(z)}$的$m$阶极点.
+$z_0为f(z)的m阶零点\xLeftrightarrow\text{Thm. 5.5}z_0为f(z)^{-1}的m阶极点$.
 
 ### 5.2
 
-Def. 5.4 留数: $f(z)在z_0处的留数为\text{Res}[f(z), z_0]=C_{-1}$.
+#### Def.
 
-Thm. 5.7 留数定理: $\oint_Cf(z)dz\overset{\text{Thm. 5.7}}{=}2\pi i\sum_i\text{Res}[f(z),z_i]$.
+$f(z)在z_0\in\mathbb{C}处的留数记为\text{Res}[f(z), z_0]\overset{\text{Def. 5.4}}{===}C_{-1}$.
 
-Law. I: $z_0为f(z)的简单极点\Rightarrow\text{Res}[f(z),z_0]=\lim_{z\rightarrow z_0}(z-z_0)f(z)$.
+$f(z)在z_0=\infty处的留数记为\text{Res}[f(z),\infty]\overset{\text{Def. 5.5}}{===}\frac{1}{2\pi i}\oint_{C^-}f(z)dz$.
 
-Law. II: $f(z)=\frac{P(z)}{Q(z)},Q(z),P(z)在z_0解析,z_0为Q(z)的一阶零点\Rightarrow z_0为f(z)的一阶极点,\text{Res}[f(z),z_0]=\frac{P(z_0)}{Q'(z_0)}$.
+#### Thm.
 
-Law. III: $z_0为f(z)的m阶极点\Rightarrow\text{Res}[f(z),z_0]=\frac{1}{(m-1)!}\lim_{z\rightarrow z_0}(\frac{d}{dz})^{m-1}(z-z_0)^mf(z)$.
+留数定理: $\oint_Cf(z)dz\overset{\text{Thm. 5.7}}{===}2\pi i\sum_i\text{Res}[f(z),z_i]$.
 
-Def. 5.5 无穷远点的留数: $\text{Res}[f(z),\infty]=\frac{1}{2\pi i}\oint_{C^-}f(z)dz$.
+留数和定理: $f(z)在\mathbb{C}上有有限个孤立奇点(包括\infty)\xRightarrow\text{Thm. 5.8} \sum_i\text{Res}[f(z),z_i]=0$.
 
-Thm. 5.8 留数和定理: $f(z)在\mathbb{C}上有有限个孤立奇点(包括\infty)\xRightarrow\text{Thm. 5.8} \sum_i\text{Res}[f(z),z_i]=0$.
+Law. I: $z_0为f(z)的简单极点\xRightarrow\text{Law. I}\text{Res}[f(z),z_0]=\lim_{z\rightarrow z_0}(z-z_0)f(z)$.
+
+Law. II: $f(z)=\frac{P(z)}{Q(z)},Q(z),P(z)在z_0解析, P(z_0)\neq 0,z_0为Q(z)的一阶零点\xRightarrow\text{Law. II} z_0为f(z)的一阶极点,\text{Res}[f(z),z_0]=\frac{P(z_0)}{Q'(z_0)}$.
+
+Law. III: $z_0为f(z)的m阶极点\xRightarrow\text{Law. III}\text{Res}[f(z),z_0]=\frac{1}{(m-1)!}\lim_{z\rightarrow z_0}(\frac{d}{dz})^{m-1}(z-z_0)^mf(z)$.
+
+Law. IV: $\xRightarrow\text{Law. IV}\text{Res}[f(z),\infty]+\text{Res}[f(\frac{1}{z})\frac{1}{z^2},0]=0$.
 
 ### 5.3
 
@@ -212,7 +258,7 @@ f(z)在\begin{cases}
 |z|\in[R_0,+\infty]\subset[0,+\infty]\\
 \end{cases}上连续, C_R为当中0为圆心半径R的圆弧, 有\lim_{z\rightarrow\infty}f(z)=0\\
 \Downarrow\text{Thm. 5.9}\\
-\forall a>0有\lim_{R\rightarrow+\infty}\int_{C_R}f(z)e_{iaz}dz=0\\
+\forall a>0有\lim_{R\rightarrow+\infty}\int_{C_R}f(z)e^{iaz}dz=0\\
 $$
 
 ### 5.4
@@ -221,6 +267,11 @@ $$
 
 ## Ch. 8 Fourier
 
+* [ ]  内部优化
+* [ ]  PPT对照
+* [ ]  书习题
+* [ ]  作业 
+
 ### 8.1&2&3
 
 Thm. 8.1: $f_T:\mathbb{R}\to\mathbb{R}为周期为T的函数, 在[-\frac{T}{2},\frac{T}{2}]上满足Dirichlet条件\Rightarrow f_T(t)=\sum_{n\in\mathbb{Z}}c_ne^{jn\omega t}, c_n=$.
@@ -228,6 +279,11 @@ Thm. 8.1: $f_T:\mathbb{R}\to\mathbb{R}为周期为T的函数, 在[-\frac{T}{2},\
 略
 
 ## Ch. 9 Laplace
+
+* [ ]  内部优化
+* [ ]  PPT对照
+* [ ]  书习题
+* [ ]  作业 
 
 ### 9.1
 
@@ -262,7 +318,6 @@ $f(t)在[0,+\infty)上分段连续, \exist c为f(t)的增长指数\xRightarrow\t
 周期性质: $f(t)周期为T, \mathcal{L}\{f(t)\}=\frac{1}{1-e^{-sT}}\int_0^Tf(t)e^{-st}dt$.
 
 剪辑定理: $\mathcal{L}\{f_1(t)*f_2(t)\}=F_1(s)\cdot F_2(s)$.
-
 
 ### 9.3
 
