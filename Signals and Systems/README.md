@@ -6,9 +6,9 @@ ID: 303519030
 
 Eng: Signals and Systems
 
-老师: 
+老师: 曾琦, QQ: 2458988668, Email: qzeng2@hotmail.com
 
-助教: 
+助教: 张皓, QQ: 2814730953
 
 实体书: 《信号与系统》(第2版)，Alan V. Oppenheim, Alan S. Willsky, S.Hamid Nawab，电子工业出版社，2011年.
 
@@ -20,7 +20,7 @@ Eng: Signals and Systems
 
 > 2: 略
 
-## Kap.3
+## Ch. 3 周期的Fourier
 
 > 3.0-1: 略
 
@@ -102,7 +102,7 @@ Eng: Signals and Systems
 
 > 3.9-12: 略
 
-## Kap.4
+## Ch.4 连续非周期的Fourier
 
 > 4.0: 略
 
@@ -142,11 +142,11 @@ Eng: Signals and Systems
 
 > 4.6-8: 略
 
-## Kap.5
+## Ch. 5 离散非周期的Fourier
 
 HW: 1(a), 3(b), 4, 8, 20, 23, 30(b)(i, ii)
 
-## Kap.6
+## Ch. 6 ?
 
 > 6.0
 
@@ -209,7 +209,7 @@ HW: 1(a), 3(b), 4, 8, 20, 23, 30(b)(i, ii)
 
 HW: 6.5, 6.23, 6.27
 
-## Kap.7
+## Ch. 7 采样
 
 > 7.0: 引言
 >
@@ -297,26 +297,14 @@ HW: 7.2, 7.6, 7.9, 7.22
 
 Kap.6-11: ?
 
-## Kap.8
+## Ch. 8
 
-## Kap.9
+略
 
-## Kap.10
+## Ch. 9 Laplace变换
 
-$$
-H(j\omega)=\frac{a-j\omega}{a+j\omega}\\
-\begin{aligned}
-\mathcal{F}^{-1}\{H(j\omega)\}
-&=\mathcal{F}^{-1}\{a-j\omega\}*\mathcal{F}^{-1}\{\frac{1}{a+j\omega}\}\\
-&=[a\delta(t)-\frac{d}{dt}\delta(t)]*[e^{-at}u(t)]\\
-&=a\delta(t)*[e^{-at}u(t)]-\frac{d}{dt}\delta(t)*[e^{-at}u(t)]\\
-&=[ae^{-at}u(t)]-[e^{-at}\delta(t)-ae^{-at}u(t)]\\
-&=2ae^{-at}u(t)-e^{-at}\delta(t)
-\end{aligned}\\
-\ \\
-y(t)=\sum H(j\omega)e^{j\omega t}
-$$
+## Ch. 10 Z变换
 
-## Kap.11
+## Ch .11
 
 test: $\text{TEST}$

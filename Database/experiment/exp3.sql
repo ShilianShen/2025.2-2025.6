@@ -4,7 +4,7 @@ CREATE TABLE Student
   (Id_Card char(17),
    Sname varchar(6),
    Sage int,
-   Ssex char(2) DEFAULT 'ÄÐ',
+   Ssex char(2) DEFAULT 'M',
    School_Number char(4),
 
    CONSTRAINT CK_Sage
