@@ -10,10 +10,11 @@ Eng: General Topology
 
 助教: 孟一凡, QQ: 1258091862
 
-电子书: 张德学, 一般拓扑学基础, 四川大学自编讲义. 熊金城, 点集拓扑讲义, 高等教育出版社, 2003年12月第3版.
+电子书: 张德学, 一般拓扑学基础, 四川大学自编讲义. ISBN 978-7-03-066315-3 熊金城, 点集拓扑讲义, 高等教育出版社, 2003年12月第3版.
 
 (只覆盖课程要求的部分)
 
+## Ch. 5 紧
 
 5.1
 
@@ -123,6 +124,8 @@ Eng: General Topology
 >
 > 定理: 紧Hausdorff => Baire空间.
 
+## Ch. 6 乘积&商
+
 6.1
 
 > 定义初始拓扑/弱拓扑: $(X, \mathcal{O})$为$(Y_i, f_i)_{i\in I}$生成的初始拓扑/弱拓扑 <=> $\mathcal{O}$是使$f_i$连续的最粗的拓扑.
@@ -151,7 +154,7 @@ Eng: General Topology
 
 > 定义商映射: f: X Y满射是商映射 <=> $\forall V$是Y的开集有$f^{-1}(V)$是X的开集.
 
-## Kap.7
+## Kap.7 连通
 
 ### 7.1
 
@@ -173,7 +176,7 @@ Cor. 7.1.3: $\{A_i\}_{i\in I}是连通子集族\cap_{i\in I}A_i\neq\empty\Righta
 
 Prop. 7.1.2: $\mathbb{R}的子集X连通\Leftrightarrow \overline{X}=[a,b],X^\circ=(a,b)$
 
-Cor. 7.1.4连续函数介值定理:
+Cor. 7.1.4 连续函数介值定理:
 
 Thm. 7.1.1:
 
@@ -181,14 +184,25 @@ Def. ?. 连通分支:
 
 Prop. 7.1.3:
 
-Def 7.1.2 局部连通: $拓扑空间X局部连通\Leftrightarrow \forall x\in X,\forallU\in\mathcal{N}(x),\exist连通子集K使x\in K^\circ\subset K\subset U$
+Def 7.1.2 局部连通: $拓扑空间X局部连通\Leftrightarrow \forall x\in X,\forall U\in\mathcal{N}(x),\exist连通子集K使x\in K^\circ\subset K\subset U$
 
 Prop. 7.1.4: 以下等价
 
 1. X局部连通
 2. $\forall X的开子空间的连通分支,是X的开集$
 
-
-
-
 ### 7.2
+
+## Ch. 8 插入
+
+### 8.1
+
+Lemma 8.1.1 Urysohn Lemma: $X正规, A, B为X的不交闭集\xRightarrow[\text{Urysohn}]\text{Lemma 8.1.1}\exists f:X\to[0,1]使f(A)=\{0\}, f(B)=\{1\}$.
+
+Lemma 8.1.2: $X为拓扑空间, \overline{D}=\mathbb{R}, \{U_r\}_{r\in D}, \cup U_r=X, \cap U_r=\empty, r<s\Rightarrow\overline{U_s}\subset U_r\xRightarrow\text{Lemma 8.1.2}f:X\to\mathbb{R},f(x)=\sup\{r\in D|x\in U_r\}连续$.
+
+Thm. 8.1.1 Hahn-Tong插入定理: $X正规, h:X\to\mathbb{R}下半连续, g:X\to\mathbb{R}上半连续,\forall x\in X有g(x)\le h(x)\xRightarrow[\text{Hahn-Tong}]\text{Thm 8.1.1}\exists f:X\to\mathbb{R}连续使g\le f\le h$.
+
+Thm. 8.1.2 Tietze扩张定理: $X正规, M是X的闭子空间, f:M\to\mathbb{R}连续\xRightarrow[\text{Tietze}]\text{Thm. 8.1.2}\exists f^*:X\to\mathbb{R}使f^*|M=f$.
+
+### 8.2

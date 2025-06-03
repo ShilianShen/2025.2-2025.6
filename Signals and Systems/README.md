@@ -1,5 +1,21 @@
 # Signals and Systems
 
+ID: 303519030
+
+中文: 信号与系统
+
+Eng: Signals and Systems
+
+老师: 
+
+助教: 
+
+实体书: 《信号与系统》(第2版)，Alan V. Oppenheim, Alan S. Willsky, S.Hamid Nawab，电子工业出版社，2011年.
+
+(只覆盖课程要求的部分)
+
+## Ch. 0
+
 > 1: 略
 
 > 2: 略
@@ -127,14 +143,6 @@
 > 4.6-8: 略
 
 ## Kap.5
-
-
-
-
-
-
-
-
 
 HW: 1(a), 3(b), 4, 8, 20, 23, 30(b)(i, ii)
 
