@@ -303,6 +303,12 @@ Kap.6-11: ?
 
 ## Ch. 9 Laplace变换
 
+### 9.0
+
+### 9.1
+
+拉普拉斯变换(Laplace transform): $X(s)=\int_{-\infty}^{+\infty}x(t)e^{-st}dt$.
+
 ## Ch. 10 Z变换
 
 ## Ch .11
