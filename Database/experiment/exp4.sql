@@ -18,7 +18,7 @@ VALUES
     ('11013019781008004', N'许静', 24, N'女', 'B_19'),
     ('12109619810706001', N'王军', 21, N'男', 'C_82'),
     ('13070519750215002', N'程红', 27, N'女', 'B_57'),
-    ('32605619800318004', N'王言', 22, N'女', 'GY'),
+    ('32605619800318004', N'王言', 22, N'女', NULL),
     ('40507819801124003', N'李蛰', 22, N'男',	'B_19')
 INSERT Loan
 VALUES
@@ -29,7 +29,7 @@ VALUES
     ('L_28', 15000.00),
     ('L_30', 10000.00),
     ('L_33', 15000.00)
-INSERT BORROWER
+INSERT Borrower
 VALUES
     ('11010519740506001', 'L_33'),
     ('11010719770304002', 'L_16'),
@@ -46,11 +46,23 @@ SELECT Loan_Number FROM Loan
 
 
 -- 4
+SELECT s.*
+    FROM Student s
+    INNER JOIN Borrower b ON s.Id_Card = b.Id_Card AND b.Loan_Number = 'L_33'
+
 
 -- 5
--- 6
+SELECT Id_Card FROM Borrower
+    GROUP BY Id_Card
+    HAVING COUNT(*) > 1
 
 
+-- 6: Id(11010519740506001) -[Borrower]-> Loan_Number -[Loan]-> Amount(->20000)
+UPDATE Loan
+    SET Amount = 20000
+        WHERE Loan_Number = (
+            SELECT Loan_Number FROM Borrower WHERE Id_Card = '11010519740506001'
+        )
 
 -- 7
 INSERT Student

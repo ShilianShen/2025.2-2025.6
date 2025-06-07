@@ -4,11 +4,11 @@ DROP TABLE Loan;
 DROP TABLE Student;
 
 CREATE TABLE Student
-(   Id_Card char(17),
-    Sname varchar(6),
+(   Id_Card CHAR(17),
+    Sname NVARCHAR(6),
     Sage int,
-    Ssex char(2) DEFAULT 'M',
-    School_Number char(4),
+    Ssex NVARCHAR(2) DEFAULT N'男',
+    School_Number char(4) NULL,
 
     CONSTRAINT CK_Sage CHECK (Sage between 6 and 40),
     CONSTRAINT PK_Id_Card PRIMARY KEY CLUSTERED (Id_Card),

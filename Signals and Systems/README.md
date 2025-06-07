@@ -311,6 +311,62 @@ Kap.6-11: ?
 
 ## Ch. 10 Z变换
 
-## Ch .11
+## Ch. 11
 
 test: $\text{TEST}$
+
+## Ch. $\infty$
+
+FT:
+
+$$
+\begin{matrix}
+& 连周 & 离周 & 连非周 & 离非周 \\
+
+乘积
+& x\cdot y\leftrightarrow a*b
+& x\cdot y\leftrightarrow a*b
+& x\cdot y\leftrightarrow X*Y =\int_\infty XY\frac{d\theta}{2\pi}
+& x\cdot y\leftrightarrow X*Y=\int_{2\pi} XY\frac{d\theta}{2\pi}
+\\\\
+
+卷积
+& x*y\leftrightarrow Ta\cdot b
+& x*y\leftrightarrow Na\cdot b
+& x*y\leftrightarrow X\cdot Y
+& x*y\leftrightarrow X\cdot Y
+\\\\
+
+微/积分
+& x^{(m)}\leftrightarrow(jk\omega_0)^ma_k
+& NULL
+& \begin{cases}
+  x' \leftrightarrow j\omega X \\
+  \int_{-\infty}^t x \leftrightarrow\frac{X}{j\omega}+\pi X(0)\delta(\omega) \\
+  tx\leftrightarrow j\frac{d}{d\omega}X
+  \end{cases}
+& NULL
+\\\\
+
+求差/和
+& NULL
+& \begin{cases}
+  x[n]-x[n-1]\leftrightarrow(1-e^{-jk\omega_0})a_k\\
+  \sum_{m=-\infty}^nx[m]\leftrightarrow(1-e^{-jk\omega_0})^{-1}a_k\\
+  \end{cases}
+& NULL
+& \begin{cases}
+  x[n]-x[n-1]\leftrightarrow(1-e^{-j\omega})X\\
+  \sum_{m=-\infty}^nx[m]\leftrightarrow(1-e^{-jk\omega_0})^{-1}X+\pi X(1)\sum_\infty\delta(\omega-2\pi k)\\
+  \end{cases}
+\\\\
+
+\text{Parseval}
+& \frac{1}{T}\int_T|x|^2dt=\sum_\infty|a_k|^2
+& \frac{1}{N}\sum_N|x|^2=\sum_N|a_k|^2
+& \int_\infty|x|^2dt=\int_\infty|X|\frac{d\omega}{2\pi}
+& \sum_\infty|x|^2=\int_{2\pi}|X|\frac{d\omega}{2\pi}
+\\\\
+
+\end{matrix}
+$$
