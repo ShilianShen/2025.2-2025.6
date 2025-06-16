@@ -14,6 +14,54 @@ Eng: General Topology
 
 (只覆盖课程要求的部分)
 
+## Ch. 4 拓扑
+
+### 4.1
+
+### 4.2
+
+### 4.3
+
+#### Def.
+
+$\mathcal{B}是\mathcal{O}的基\xLeftrightarrow\text{Def. 4.3.1}\forall U\in\mathcal{O}\exists\mathcal{U}\subset\mathcal{B}使U=\cup\mathcal{U}$.
+
+$\mathcal{B}是\mathcal{O}的子基\xLeftrightarrow\text{Def. 4.3.2}\{X\}\cup\{\cap_{i\le n}B_i|B_i\in\mathcal{B}\}是\mathcal{O}的基$.
+
+$\mathcal{A}是x的邻域基\xLeftrightarrow\text{Def. 4.3.3}\forall U, x\in U, \exists V\in\mathcal{A}使x\in V\subset U$.
+
+$X第一可数\xLeftrightarrow\text{Def. 4.3.4}\forall x\in X,\exists x的可数的邻域基$.
+
+$X第二可数\xLeftrightarrow\text{Def. 4.3.4}\exists X的可数的基$.
+
+#### Thm.
+
+$\mathcal{B}\subset\mathcal{O}: \mathcal{B}是基\xLeftrightarrow\text{Prop. 4.3.1}\forall U,\forall x\in U, \exists B\in\mathcal{B}时x\in B\subset U$.
+
+$$
+\mathcal{B}是基\xRightarrow\text{Prop. 4.3.2}
+\begin{cases}
+\cup\mathcal{B}=X \\
+\forall B_1,B_2\in\mathcal{B}, \forall x\in B_1\cap B_2, \exists B_3\in\mathcal{B}使x\in B_3\subset B_1\cap B_2 \\
+\end{cases}
+$$
+
+$\text{Prop. 4.3.3}: 一个基生成的拓扑是唯一的$.
+
+$\text{Prop. 4.3.4}: 一个子基生成的拓扑是唯一的$.
+
+$Y\subset X: \mathcal{B}是X的基\xRightarrow\text{Prop. 4.3.5}\{B\cap Y|B\in\mathcal{B}\}是Y的基$.
+
+$f:(X,\mathcal{O}_X)\to(Y,\mathcal{O}_Y),\mathcal{B}为Y的子基:f连续\xLeftrightarrow\text{Prop. 4.3.6}\forall U\in\mathcal{B}, f^{-1}(U)为X的开集$.
+
+$\mathcal{A}是y\in Y\subset X在X中的邻域基\xRightarrow\text{Prop. 4.3.7}\{V\cap Y|V\in\mathcal{A}\}是y在Y中的邻域基$.
+
+$\text{Prop. 4.3.8}: 第⼆可数空间是第⼀可数的和可分的$.
+
+$\text{Thm. 4.3.1}: 可分的度量空间第⼆可数$.
+
+### 4.4
+
 ## Ch. 5 紧
 
 5.1
@@ -126,35 +174,106 @@ Eng: General Topology
 
 ## Ch. 6 乘积&商
 
-6.1
+### 6.1 乘积空间
 
-> 定义初始拓扑/弱拓扑: $(X, \mathcal{O})$为$(Y_i, f_i)_{i\in I}$生成的初始拓扑/弱拓扑 <=> $\mathcal{O}$是使$f_i$连续的最粗的拓扑.
->
-> 命题: $\mathcal{O}$是$(Y_i, f_i)_{i\in I}$生成的初始拓扑 => $h:Z\rightarrow X$连续$\Leftrightarrow\forall i\in I$有$f_i\circ h:Z\rightarrow Y_i$连续.
->
-> 命题: $\mathcal{O}$是$(Y_i, f_i)_{i\in I}$生成的初始拓扑:
->
-> $\xi$收敛于$x$ <=> $\forall i\in I, f_i\circ\xi $收敛$f_i(x)$.
->
-> 定义乘积空间: $X_1\times X_2$为$X_1,X_2$的乘积空间 <=> $X_1\times X_2$的拓扑为$p_i((\cdots, x_i,\cdots))=x_i$生成的初始拓扑.
->
-> 自证: ...
->
-> 命题: X为Hausdorff <=> $X\times X$的对角线$\{(x, x)|x\in X\}$为闭集.
->
-> 命题: $X_1, X_2$紧 => $X_1\times X_2$紧
->
-> Kuratowski定理: 拓扑空间X是紧空间 <=> $\forall Y, p_Y:X\times Y\rightarrow Y$是闭映射.
->
-> ...
+#### Def.
 
-6.2
+$(X, \mathcal{O})为(Y_i, f_i)_{i\in I}生成的初始/弱拓扑 \xLeftrightarrow\text{Def. 6.1.0} \mathcal{O}是使f_i连续的最粗的拓扑$.
 
-6.3
+$X_1\times X_2为X_1,X_2的乘积空间 \xLeftrightarrow\text{Def. 6.1.0} X_1\times X_2的拓扑为投射生成的初始拓扑$.
 
-> 定义商映射: f: X Y满射是商映射 <=> $\forall V$是Y的开集有$f^{-1}(V)$是X的开集.
+#### Prop./Thm./Lamma
 
-## Kap.7 连通
+$\mathcal{O}是(Y_i, f_i)_{i\in I}生成的初始拓扑 \xRightarrow\text{Prop. 6.1.1} h:Z\rightarrow X连续\Leftrightarrow\forall i\in I有f_i\circ h:Z\rightarrow Y_i连续$.
+
+$\mathcal{O}是(Y_i, f_i)_{i\in I}生成的初始拓扑: \xi收敛于x \xLeftrightarrow\text{Prop. 6.1.2} \forall i\in I, f_i\circ\xi 收敛f_i(x)$.
+
+$X为T_2 \xLeftrightarrow\text{Prop. 6.1.3} X\times X的对角线\{(x, x)|x\in X\}为闭集$.
+
+$X_1,X_2都紧\xRightarrow\text{Prop. 6.1.4} X_1\times X_2紧$.
+
+$X紧\xLeftrightarrow[\text{Kuratowski}]\text{Thm. 6.1.1}\forall Y, 投射p_Y:X\times Y\to Y为闭映射$.
+
+$A是X的紧子集,b\in Y, A\times\{b\}\in W开集\subset X\times Y\xRightarrow[\text{管形引理}]\text{Lemma 6.1.1}\exists X的开集U,Y的开集V使A\times\{b\}\in U\times V\subset W$.
+
+### 6.2 Tychonoff乘积定理
+
+#### Def.
+
+$P为拓扑空间的某性质: P有限/可数/任意可乘\xLeftrightarrow\text{Def. 6.2.0}有限/可数/任意个有P的空间的乘积也有P$.
+
+#### Prop.
+
+$选择公理: 略$.
+
+$\text{Banach-Tarski分球定理}: 略$.
+
+$\xRightarrow\text{Prop. 6.2.1} 正则和T_{i\in\{0,1,2,3\}}任意可乘$.
+
+$\xRightarrow\text{Prop 6.2.2} Cantor集C同胚于离散空间的可数次幂\{0,1\}^N$?
+
+$\xRightarrow\text{Prop. 6.2.3} 第一/二可数, 可分是可数可乘的$.
+
+$\xRightarrow\text{Thm. 6.2.1} 可度量化是可数可乘的$.
+
+$\xRightarrow[\text{Tychonoff乘积定理}]\text{Thm. 6.2.2} 紧性是任意可乘的$.
+
+$偏序集(P, \le)的\forall链都有上界\xRightarrow[\text{Zorn引理}]\text{Lemma 6.2.0}(P, \le)有极大元$?
+
+$(X, \mathcal{O}), \mathcal{B}是\mathcal{O}的子基:\forall\mathcal{A}\subset\mathcal{B}使X\subset\cup\mathcal{A}, \exists\{A_i\}_{i\le n}使X\subset\cup_{i\le n}A_i\xRightarrow[\text{Alexander子基引理}]\text{Lemma 6.2.1}(X, \mathcal{O})紧$?
+
+### 6.3 商空间
+
+#### Def.
+
+$X关于E的商\xLeftrightarrow\text{Def. 6.3.0} X/E:=\{[x]|x\in X\}$.
+
+$\text{Def. 6.3.0}: q:X\to X/E,q(x)=[x]为粘合映射$.
+
+$\text{Def. 6.3.0}: f:X\to Y,E(f):=\{(x_1,x_2)\in X\times X|f(x_1)=f(x_2)\}是由f诱导的等价关系$.
+
+$\text{Def. 6.3.0}: \overline{f}:X/E(f)\to Y, \overline{f}([x])=f(x)$.
+
+$\mathcal{O}为X上由(Y_i, f_i)_{i\in I}生成的终/强拓扑\xLeftrightarrow\text{Def. 6.3.0}\mathcal{O}是使f_i连续的最细的拓扑$.
+
+$X/E为X关于E的商空间\xLeftrightarrow\text{Def. 6.3.1}该拓扑为\{V\subset X/E|q^{-1}(V)为X的开集\}$.
+
+$f:X\to Y为商映射\xLeftrightarrow\text{Def. 6.3.2}f满射, Y的拓扑是f生成的终拓扑$.
+
+#### Thm.
+
+$$
+\text{Lemma 6.3.1}:\\
+1.\overline{f}单射且\overline{f}\circ q=f\\
+2.\overline{f}双射\Leftrightarrow f满射
+$$
+
+$(Y_i,f_i)_{i\in I}生成的终拓扑X, g:X\to Z:g连续\xLeftrightarrow\text{Prop. 6.3.1}\forall i\in I, g\circ f_i连续$.
+
+$连续开/闭映射\xRightarrow\text{Prop. 6.3.2}商映射$.
+
+$f:X\to Y为商映射\forall Z, g:Y\to Z:g连续\xLeftrightarrow\text{Prop. 6.3.3}g\circ f连续$.
+
+$$
+\text{Thm. 6.3.1}:\\
+1.\overline{f}连续单射且\overline{f}\circ q=f\\
+2.\overline{f}同胚\Leftrightarrow f商映射
+$$
+
+$$
+X紧Hausdorff则\xRightarrow[\text{Alexandroff 定理}]\text{Thm. 6.3.2}
+\begin{cases}
+X/E紧Hausdorff \\
+E是X\times X的闭集 \\
+q为闭映射\\
+\end{cases}
+$$
+
+$正规/T_4的闭连续像\xRightarrow\text{Prop. 6.3.4}正规/T_4$.
+
+$X,Y紧Hausdorff, E_X为X\times X的闭集, 同理E_Y\xRightarrow\text{Cor. 6.3.1}(X\times Y)/(E_X\times E_Y)同胚于(X/E_X)\times(Y/E_Y)$.
+
+## Ch. 7 连通
 
 ### 7.1
 
@@ -192,6 +311,38 @@ Prop. 7.1.4: 以下等价
 2. $\forall X的开子空间的连通分支,是X的开集$
 
 ### 7.2
+
+#### Def.
+
+$X道路连通\xLeftrightarrow\text{Def. 7.2.0}\forall x,y\in X,\exists连续\alpha:[0,1]\to X使\alpha(0)=x,\alpha(1)=y$.
+
+$P(x)为X的道路连通分支\xLeftrightarrow\text{Def. 7.2.0}P(x)=\cup\{A\subset X|x\in A, A道路连通\}$.
+
+$X局部道路连通\xLeftrightarrow\text{Def. 7.2.0}\forall x, X的开U:x\in U\subset X, \exists K道路连通使x\in K^\circ\subset K\subset U$.
+
+#### Prop.
+
+$$
+X道路连通\xRightarrow\text{Prop. 7.2.1}
+\begin{cases}
+X连通 \\
+f连续, f(X)道路连通 \\
+道路连通是任意可乘的 \\
+\end{cases}
+$$
+
+$\{A_i\}_{i\in I}是X的道路连通子集,\cap_{i\in I}A_i\neq\empty\xRightarrow\text{Prop. 7.2.2}\cup_{i\in I}A_i道路连通$.
+
+$$
+\text{Prop. 7.2.3}以下等价:\\
+\begin{cases}
+X局部道路连通 \\
+X的每个开子空间的道路连通分支为X的开集 \\ 
+X有一个道路连通的开集的基 \\
+\end{cases}
+$$
+
+.$X连通, X局部道路连通\xRightarrow\text{Cor. 7.2.1}X道路连通$.
 
 ## Ch. 8 插入
 
