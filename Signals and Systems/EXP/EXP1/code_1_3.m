@@ -21,7 +21,7 @@ N = 128;                       % 频域上的采样点数量
 f = fs * (0: N-1) / N;         % 频域上的采样点
 X = fft(x, N) / N;             % 频域上的采样点对应的值
 X_A = abs(X);                  % 频域上的采样点对应的幅值
-X_theta = angle(X) * pi / 180; % 频域上的采样点对应的相值
+X_theta = angle(X) * 180 / pi; % 频域上的采样点对应的相值
 
 % 输出信号x的幅频谱和相频谱
 figure(2);
@@ -47,7 +47,7 @@ ak = 2 * sin(k * pi / 2) ./ (k * pi);
 ak(1) = 0;                            % k对应的傅里叶系数ak
 fk = k * f0;                          % k对应的频域上的采样点
 ak_A = abs(ak);                       % 傅里叶系数ak的幅值
-ak_theta = angle(ak) * pi / 180;      % 傅里叶系数ak的相值
+ak_theta = angle(ak) * 180 / pi;      % 傅里叶系数ak的相值
 
 % 输出傅里叶系数ak的幅和相
 figure(3);

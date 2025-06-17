@@ -1,60 +1,26 @@
-# FUCK YOU
+# EXP. 2
 
-## EXP. 1
+## 理论计算
 
-### (1)
+### (1) 计算系统的幅度响应，判断该系统是哪一类频率选择性滤波器？（低通、高通、带通、带阻）
 
-$$
-x(t)=2\sum_{k=-\infty}^\infty \frac{\sin(k\pi/2)}{k\pi} e^{jk\pi t}-1
-$$
-
-$$
-x(t)=2\sum_{k=-\infty}^\infty\frac{\sin(k\pi/2)}{k\pi}\cos(k\pi t)+2j\sum_{k=-\infty}^\infty\frac{\sin(k\pi/2)}{k\pi}\sin(k\pi t)-1
-$$
-
-### (2)
-
-$$
-\begin{aligned}
-a_k
-&=\frac{1}{T}\int_{-T/2}^{T/2}x(t)e^{-jk\omega_0 t}dt \\
-&=\frac{1}{2}\int_{-1}^{1}x(t)e^{-jk\pi t}dt \\
-&=\frac{1}{2}\int_{-1}^{1}[2u(|t|-0.5)-1]e^{-jk\pi t}dt \\
-&=\int_{-1}^{1}u(|t|-0.5)e^{-jk\pi t}dt - \int_{-1}^{1}e^{-jk\pi t}dt \\
-\end{aligned}\\
-$$
-
-$$
-a_k=
-\begin{cases}
-2\frac{\sin(k\pi/2)}{k\pi} & k\neq 0\\
-0 & k=0
-\end{cases}\\
-$$
-
-### (3)
-
-
-
-### (4)
-
-$$
-x(t)=2\sum_{k=-\infty}^\infty \frac{\sin(k\pi/2)}{k\pi} e^{jk\pi t}-1 \\
-$$
-
-## EXP. 2
+计算$H(s)$:
 
 $$
 y''+y'+25y = x \\
 s^2Y+sY+25Y = X \\
 \begin{aligned}
 H
-&= \frac{Y}{X} \\
-&= \frac{1}{s^2+s+25} \\
-&= \frac{1}{(s-\frac{-1+j3\sqrt{11}}{2})(s-\frac{-1-j3\sqrt{11}}{2})} \\
+&= \frac{Y}{X} = \frac{1}{s^2+s+25} = \frac{1}{(s-\frac{-1+j3\sqrt{11}}{2})(s-\frac{-1-j3\sqrt{11}}{2})} \\
 &= \frac{1}{j3\sqrt{11}}(\frac{1}{s-\frac{-1+j3\sqrt{11}}{2}}-\frac{1}{s-\frac{-1-j3\sqrt{11}}{2}}) \\
 \end{aligned}
 $$
+
+可知有$H(s)$有极点在$\frac{-1\pm j3\sqrt{11}}{2}$, 所以在复平面的虚轴上, $\frac{-1-j3\sqrt{11}}{2}<\omega<\frac{-1+j3\sqrt{11}}{2}$对应的$H(j\omega)$偏大, 所以为低通性滤波器.
+
+### (2) 求系统的输出信号
+
+用
 
 $$
 x = 10[\sin(1.6\pi t)+\sin(10\pi t)] \\
@@ -63,7 +29,7 @@ y = \frac{10}{2j}(H(j1.6\pi)e^{j1.6\pi t}-H(-j1.6\pi)e^{-j1.6\pi t}+H(j10\pi)e^{
 y = \frac{10}{2j}(H(j1.6\pi)e^{j1.6\pi t}-H(-j1.6\pi)e^{-j1.6\pi t}+H(j10\pi)e^{j10\pi t}-H(-j10\pi)e^{-j10\pi t}) \\
 $$
 
-## EXP. 3
+# EXP. 3
 
 $$
 y''\pm y'+25y=x\\
