@@ -32,7 +32,6 @@ xlabel('frequency/Hz');
 ylabel('amplitude');
 grid on;
 
-figure(2);
 subplot(2, 1, 2);
 plot(f, X_theta);
 title('phase spectrum of x(t) by fft');
@@ -58,7 +57,6 @@ xlabel('f=kf_0, frequency/Hz');
 ylabel('amplitude');
 grid on;
 
-figure(3);
 subplot(2, 1, 2);
 stem(fk, ak_theta, 'r');
 title('phase spectrum of a_k');

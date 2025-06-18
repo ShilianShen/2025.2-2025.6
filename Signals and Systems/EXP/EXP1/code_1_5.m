@@ -1,4 +1,3 @@
-% (3)i
 fs = 100;             % 时域上的采样频率 
 t = -10.5: 1/fs: 9.5; % 时域上的采样点
 x2 = square(pi * t);  % 时域上的采样点x对应的值
@@ -18,7 +17,6 @@ xlabel('frequency/Hz');
 ylabel('amplitude');
 grid on;
 
-figure(5);
 subplot(2, 1, 2);
 plot(f, X2_theta);
 title('phase spectrum of x(t-0.5) by fft');
