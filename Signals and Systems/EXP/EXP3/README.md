@@ -61,7 +61,7 @@ $$
 终值: \lim_{t\rightarrow\infty} h*\delta(t)=
 \begin{cases}
 0 & a=+1 \\
-\infty & a=-1
+发散 & a=-1
 \end{cases}\\
 $$
 
@@ -72,7 +72,7 @@ $$
 终值: \lim_{t\rightarrow\infty} h*u(t)=
 \begin{cases}
 \frac{1}{25} & a=+1 \\
-\infty & a=-1
+发散 & a=-1
 \end{cases}\\
 $$
 
@@ -106,6 +106,42 @@ grid on;
 
 ### (2) 画出系统单位冲激响应和单位阶跃响应的波形
 
-### (3) 由仿真结果验证理论分析结论
+使用matlab的impulse和step函数
 
-### (4) 还有什么见解？
+```matlab
+t = 0: 0.01: 20;          % 在时域上的采样点
+h = impulse(num, den, t); % 单位冲击响应
+s = step(num, den, t);    % 单位阶跃响应
+
+% 输出单位冲击响应&单位阶跃响应的时域波形
+figure(2);
+plot(t,h); 
+hold on;
+plot(t,s,'r'); 
+hold off;
+title(['signals: h*\delta(t) & h*u(t), a=', num2str(a)]);
+xlabel('time/s');
+ylabel('amplitude');
+legend('impulse','step');
+grid on;
+```
+
+![](figure2+1.png)
+
+![](figure2-1.png)
+
+### (3) 由仿真结果验证理论分析结论FUCK比较主观, 可以改改
+
+由仿真结果可见,
+
+$a=+1$时: 单位冲激响应初值为0, 终值为0; 单位阶跃响应初值为0, 终值为0.04左右, 和理论值$\frac{1}{25}$几乎无偏差;
+
+$a=-1$时: 单位冲激响应初值为0, 终值发散; 单位阶跃响应初值为0, 终值发散.
+
+仿真结果和理论分析结论可以在极小误差范围内被认为一致, 同时a的取值也验证了系统的稳定性或不稳定性, 因此理论分析结论得到验证.
+
+### (4) 还有什么见解?FUCK太鸡把主观了, 必须改改
+
+这个LTI提供了一个终值定理的限制的例子, 即终值定理仅适用于稳定系统, 若系统有极点在虚轴或右半平面, 则终值定理失效. 这里$a=-1$时的$\lim_{t\rightarrow\infty}h*\delta(t)\neq\lim_{s\rightarrow0}sH(s)=\frac{1}{25}$.
+
+例子也体现了极点位置与稳定性的影响, 对于因果系统, 如果在复平面的右半边有极点, 则是非稳定系统; 如果在复平面的右半边无极点, 则是稳定系统.
