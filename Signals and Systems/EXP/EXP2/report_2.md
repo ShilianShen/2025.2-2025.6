@@ -9,14 +9,8 @@
 计算$H(s)$:
 
 $$
-y''(t)+y'(t)+25y(t) = x(t)
-$$
-
-$$
-s^2Y(s)+sY(s)+25Y(s) = X(s)
-$$
-
-$$
+y''(t)+y'(t)+25y(t) = x(t) \\
+s^2Y(s)+sY(s)+25Y(s) = X(s) \\
 H(s) = \frac{Y(s)}{X(s)} = \frac{1}{s^2+s+25} = \frac{1}{(s+\frac12)^2+(\frac32\sqrt{11})^2}
 $$
 
@@ -27,19 +21,11 @@ $$
 把信号展开为特征函数的线性组合会更加方便计算:
 
 $$
-x(t) = 10[\sin(1.6\pi t)+\sin(10\pi t)]
-$$
-
-$$
-x(t) = \frac{10}{2j}[e^{j1.6\pi t}-e^{-j1.6\pi t}+e^{j10\pi t}-e^{-j10\pi t}]
-$$
-
-$$
-y(t) = \frac{10}{2j}[H(j1.6\pi)e^{j1.6\pi t}-H(-j1.6\pi)e^{-j1.6\pi t}+H(j10\pi)e^{j10\pi t}-H(-j10\pi)e^{-j10\pi t}] 
-$$
-
-$$
-注意到H(s^*)=H(s)^*, 所以 y(t) = 10[\mathcal{Im}\{H(j1.6\pi)e^{j1.6\pi t}\}+10\mathcal{Im}\{H(j10\pi)e^{j10\pi t}\}]
+x(t) = 10[\sin(1.6\pi t)+\sin(10\pi t)] \\
+x(t) = \frac{10}{2j}[e^{j1.6\pi t}-e^{-j1.6\pi t}+e^{j10\pi t}-e^{-j10\pi t}] \\
+y(t) = \frac{10}{2j}[H(j1.6\pi)e^{j1.6\pi t}-H(-j1.6\pi)e^{-j1.6\pi t}+H(j10\pi)e^{j10\pi t}-H(-j10\pi)e^{-j10\pi t}] \\
+注意到H(s^*)=H(s)^* \\
+所以 y(t) = 10[\mathcal{Im}\{H(j1.6\pi)e^{j1.6\pi t}\}+10\mathcal{Im}\{H(j10\pi)e^{j10\pi t}\}]
 $$
 
 ## 仿真分析
@@ -57,7 +43,7 @@ bode(sys);
 grid on;
 ```
 
-![](figure1.png)
+![](figure_1.png)
 
 相比PPT这里使用了Matlab自带的bode函数画图(也和老师确认过, 是可以使用的).
 
@@ -90,9 +76,9 @@ Y_A = abs(Y);                  % 频域上的采样点Y对应的幅值
 Y_theta = angle(Y) * 180 / pi; % 频域上的采样点Y对应的相值
 ```
 
-![](figure2-20.png)
+![](figure_2-20.png)
 
-![](figure3-20.png)
+![](figure_3-20.png)
 
 可以看出响应信号频率为5Hz的部分几乎看不出来, 此时正常滤波.
 
@@ -102,9 +88,9 @@ Y_theta = angle(Y) * 180 / pi; % 频域上的采样点Y对应的相值
 
 代码和I中一样, 不再给出.
 
-![](figure2-4.png)
+![](figure_2-4.png)
 
-![](figure3-4.png)
+![](figure_3-4.png)
 
 可以发现混叠导致原本频率为5Hz的部分变为了1Hz, 所以就算经过滤波也无法明显去除, 滤波效果不好.
 
@@ -114,8 +100,8 @@ Y_theta = angle(Y) * 180 / pi; % 频域上的采样点Y对应的相值
 
 代码和I中一样, 不再给出.
 
-![](figure2-100.png)
+![](figure_2-100.png)
 
-![](figure3-100.png)
+![](figure_3-100.png)
 
 可以看出响应信号频率为5Hz的部分几乎看不出来, 此时正常滤波.

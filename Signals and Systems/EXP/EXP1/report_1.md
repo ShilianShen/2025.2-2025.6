@@ -24,8 +24,8 @@ a_k
 &=\frac{1}{T}\int_{-T/2}^{T/2}x(t)e^{-jk\omega_0 t}dt \\
 &=\frac{1}{2}\int_{-1}^{1}x(t)e^{-jk\pi t}dt \\
 &=\frac{1}{2}\int_{-1}^{1}[2u(|t|-0.5)-1]e^{-jk\pi t}dt \\
-&=\int_{-1}^{1}u(|t|-0.5)e^{-jk\pi t}dt - \int_{-1}^{1}e^{-jk\pi t}dt \\
-\end{aligned}\\
+&=\int_{-1}^{1}u(|t|-0.5)e^{-jk\pi t}dt - \int_{-1}^{1}e^{-jk\pi t}dt
+\end{aligned}
 $$
 
 需要分类讨论:
@@ -56,7 +56,7 @@ ylabel('amplitude');
 grid on;
 ```
 
-![](figure1.png)
+![](./figure_1.png)
 
 ### II 画出幅频谱和相频谱
 
@@ -85,7 +85,7 @@ ylabel('phase/°')
 grid on;
 ```
 
-![](figure2.png)
+![](./figure_2.png)
 
 由于在FFT的信号实际上为一个采样得到的向量, 所以这里被看作一个离散信号, 因此FFT得到的应该是以$f_s$为周期的Fourier变换, 同时可以把图的后半部分当作负频对应的值.
 
@@ -116,7 +116,7 @@ ylabel('phase/°');
 grid on;
 ```
 
-![](figure3.png)
+![](./figure_3.png)
 
 $a_k$的计算是由数学表达式推来的, 所以是解析的.
 
@@ -146,7 +146,7 @@ grid on;
 
 ![]()
 
-![](figure4.png)
+![](./figure_4.png)
 
 $x(t)$和$x_{re}(t)$的对比.
 
@@ -180,7 +180,7 @@ ylabel('phase/°')
 grid on;
 ```
 
-![](figure5.png)
+![](./figure_5.png)
 
 验证时移性质: 有图可见, 幅频谱几乎一致, 相频谱出现了垂直平移(这里因为相角限制在了$-180\le\theta<180$之间, 所以图上不是很明显), 符合时移性质.
 

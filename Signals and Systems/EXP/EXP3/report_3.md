@@ -91,9 +91,9 @@ ylabel('Im');
 grid on;
 ```
 
-![](figure1+1.png)
+![](figure_1+1.png)
 
-![](figure1-1.png)
+![](figure_1-1.png)
 
 可见与之前计算的极点坐标符合.
 
@@ -119,9 +119,9 @@ legend('impulse','step');
 grid on;
 ```
 
-![](figure2+1.png)
+![](figure_2+1.png)
 
-![](figure2-1.png)
+![](figure_2-1.png)
 
 ### (3) 由仿真结果验证理论分析结论FUCK比较主观, 可以改改
 
