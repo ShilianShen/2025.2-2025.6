@@ -91,7 +91,8 @@ SELECT Loan_Number, Amount
 
 -- 4
 SELECT s.*, l.*
-    FROM Borrower AS b INNER JOIN Student AS s
+    FROM Borrower AS b
+        INNER JOIN Student AS s
         ON b.Id_Card = s.Id_Card
         INNER JOIN Loan AS l
             ON b.Loan_Number = l.Loan_Number

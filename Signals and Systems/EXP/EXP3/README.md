@@ -9,10 +9,19 @@
 首先计算$H(s)$:
 
 $$
-y''(t)\pm y'(t)+25y(t)=x(t)\\
-s^2Y(s)\pm sY(s)+25Y(s)=X(s)\\
-H(s)=\frac{Y(s)}{X(s)}=\frac{1}{s^2\pm s+25}=\frac{1}{(s-\frac{\mp 1+j3\sqrt{11}}{2})(s-\frac{\mp 1-j3\sqrt{11}}{2})}\\
-=\frac{1}{j3\sqrt{11}}(\frac{1}{s-\frac{\mp 1+j3\sqrt{11}}{2}}+\frac{-1}{s-\frac{\mp 1-j3\sqrt{11}}{2}})
+y''(t)\pm y'(t)+25y(t)=x(t)
+$$
+
+$$
+s^2Y(s)\pm sY(s)+25Y(s)=X(s)
+$$
+
+$$
+H(s)=\frac{Y(s)}{X(s)}=\frac{1}{s^2\pm s+25}=\frac{1}{(s-\frac{\mp 1+j3\sqrt{11}}{2})(s-\frac{\mp 1-j3\sqrt{11}}{2})}
+$$
+
+$$
+H(s)=\frac{1}{j3\sqrt{11}}(\frac{1}{s-\frac{\mp 1+j3\sqrt{11}}{2}}+\frac{-1}{s-\frac{\mp 1-j3\sqrt{11}}{2}})
 $$
 
 可见$H(s)$有极点$\frac{\mp 1+j3\sqrt{11}}{2}, \frac{\mp 1-j3\sqrt{11}}{2}$, 分类讨论:
@@ -25,56 +34,40 @@ $$
 #### I 单位冲激响应
 
 $$
-\begin{aligned}
-h(t)*\delta(t) \xleftrightarrow\mathcal{L}H(s) \cdot 1 
-&= \frac{1}{s^2\pm s+25} \\
-&= \frac{1}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2} \\
-\end{aligned} \\
+h(t)*\delta(t) \leftrightarrow H(s) \cdot 1 = \frac{1}{s^2\pm s+25} = \frac{1}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}
+$$
 
-\begin{aligned}
-h(t)*\delta(t) 
-&= \frac2{3\sqrt{11}}e^{\mp\frac12t}\sin(\frac32\sqrt{11}t)u(t)
-\end{aligned}
+$$
+h(t)*\delta(t)= \frac2{3\sqrt{11}}e^{\mp\frac12t}\sin(\frac32\sqrt{11}t)u(t)
 $$
 
 #### II 单位阶跃响应
 
 $$
-\begin{aligned}
-h(t)*u(t) \xleftrightarrow\mathcal{L}H(s)\cdot\frac1s
-&= \frac1s\cdot\frac{1}{s^2\pm s+25} \\
-&= \frac1{25}(\frac1s-\frac{s\pm1}{s^2\pm s+25}) \\
-&= \frac1{25}(\frac1s-\frac{s\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}-\frac{\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}) \\
-\end{aligned} \\
-\begin{aligned}
-h(t)*u(t) 
-&= \frac1{25}(1-e^{\mp\frac12t}\cos(\frac32\sqrt{11}t)-e^{\mp\frac12t}\frac{\pm 1}{3\sqrt{11}}\sin(\frac32\sqrt{11}t))u(t) \\
-\end{aligned}
+h(t)*u(t) \leftrightarrow H(s)\cdot\frac1s= \frac1s\cdot\frac{1}{s^2\pm s+25} = \frac1{25}(\frac1s-\frac{s\pm1}{s^2\pm s+25})
+$$
+
+$$
+H(s)= \frac1{25}(\frac1s-\frac{s\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}-\frac{\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2})
+$$
+
+$$
+h(t)*u(t)= \frac1{25}(1-e^{\mp\frac12t}\cos(\frac32\sqrt{11}t)-e^{\mp\frac12t}\frac{\pm 1}{3\sqrt{11}}\sin(\frac32\sqrt{11}t))u(t)
 $$
 
 ### (3) 求以上响应的初值和终值
 
 #### I 单位冲激响应
 
-$$
-初值: h*\delta(0^+)=0\\
-终值: \lim_{t\rightarrow\infty} h*\delta(t)=
-\begin{cases}
-0 & a=+1 \\
-发散 & a=-1
-\end{cases}\\
-$$
+$a=+1$时: 初值: $h*\delta(0^+)=0$, 终值: $\lim_{t\rightarrow\infty} h*\delta(t)=0$.
+
+$a=-1$时: 初值: $h*\delta(0^+)=0$, 终值: $\lim_{t\rightarrow\infty} h*\delta(t)发散$.
 
 #### II 单位阶跃响应
 
-$$
-初值: h*u(0^+)=0\\
-终值: \lim_{t\rightarrow\infty} h*u(t)=
-\begin{cases}
-\frac{1}{25} & a=+1 \\
-发散 & a=-1
-\end{cases}\\
-$$
+$a=+1$时: 初值: $h*u(0^+)=0$, 终值: $\lim_{t\rightarrow\infty} h*u(t)=\frac{1}{25}$.
+
+$a=-1$时: 初值: $h*u(0^+)=0$, 终值: $\lim_{t\rightarrow\infty} h*u(t)发散$.
 
 ## 仿真分析
 

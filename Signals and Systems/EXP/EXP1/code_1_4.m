@@ -14,4 +14,3 @@ xlabel('time/s');
 ylabel('amplitude');
 legend({'x(t)','x_{re}(t)'},'Location','southwest')
 grid on;
-

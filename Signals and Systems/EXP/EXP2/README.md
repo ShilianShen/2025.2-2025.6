@@ -9,12 +9,15 @@
 计算$H(s)$:
 
 $$
-y''(t)+y'(t)+25y(t) = x(t) \\
-s^2Y(s)+sY(s)+25Y(s) = X(s) \\
-\begin{aligned}
-H(s)
-&= \frac{Y(s)}{X(s)} = \frac{1}{s^2+s+25} = \frac{1}{(s+\frac12)^2+(\frac32\sqrt{11})^2}
-\end{aligned}
+y''(t)+y'(t)+25y(t) = x(t)
+$$
+
+$$
+s^2Y(s)+sY(s)+25Y(s) = X(s)
+$$
+
+$$
+H(s) = \frac{Y(s)}{X(s)} = \frac{1}{s^2+s+25} = \frac{1}{(s+\frac12)^2+(\frac32\sqrt{11})^2}
 $$
 
 可知有$H(s)$有极点在$\frac{-1\pm j3\sqrt{11}}{2}$, 所以通过零极点图发现, 在复平面的虚轴上, $\frac{-1-j3\sqrt{11}}{2}<\omega<\frac{-1+j3\sqrt{11}}{2}$对应的$H(j\omega)$偏大, 所以为低通性滤波器.
@@ -24,14 +27,20 @@ $$
 把信号展开为特征函数的线性组合会更加方便计算:
 
 $$
-x(t) = 10[\sin(1.6\pi t)+\sin(10\pi t)] \\
-x(t) = \frac{10}{2j}[e^{j1.6\pi t}-e^{-j1.6\pi t}+e^{j10\pi t}-e^{-j10\pi t}] \\
-y(t) = \frac{10}{2j}[H(j1.6\pi)e^{j1.6\pi t}-H(-j1.6\pi)e^{-j1.6\pi t}+H(j10\pi)e^{j10\pi t}-H(-j10\pi)e^{-j10\pi t}] \\
-注意到H(s^*)=H(s)^*, 所以 \\
-y(t) = 10[\mathcal{Im}\{H(j1.6\pi)e^{j1.6\pi t}\}+10\mathcal{Im}\{H(j10\pi)e^{j10\pi t}\}] \\
+x(t) = 10[\sin(1.6\pi t)+\sin(10\pi t)]
 $$
 
-不进一步计算, 要不然显得不简洁.
+$$
+x(t) = \frac{10}{2j}[e^{j1.6\pi t}-e^{-j1.6\pi t}+e^{j10\pi t}-e^{-j10\pi t}]
+$$
+
+$$
+y(t) = \frac{10}{2j}[H(j1.6\pi)e^{j1.6\pi t}-H(-j1.6\pi)e^{-j1.6\pi t}+H(j10\pi)e^{j10\pi t}-H(-j10\pi)e^{-j10\pi t}] 
+$$
+
+$$
+注意到H(s^*)=H(s)^*, 所以 y(t) = 10[\mathcal{Im}\{H(j1.6\pi)e^{j1.6\pi t}\}+10\mathcal{Im}\{H(j10\pi)e^{j10\pi t}\}]
+$$
 
 ## 仿真分析
 

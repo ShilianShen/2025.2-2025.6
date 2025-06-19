@@ -31,11 +31,7 @@ $$
 需要分类讨论:
 
 $$
-a_k=
-\begin{cases}
-2\frac{\sin(k\pi/2)}{k\pi} & k\neq 0\\
-0 & k=0
-\end{cases}\\
+a_0=0, a_k=2\frac{\sin(k\pi/2)}{k\pi}(k\neq 0)
 $$
 
 ## (3) 编程，对x(t)进行频谱分析

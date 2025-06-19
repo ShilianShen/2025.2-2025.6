@@ -17,7 +17,7 @@ CREATE TABLE Books
     Location VARCHAR(64),
     PressName VARCHAR(32),
 
-    PRIMARY KEY (Id),
+    CONSTRAINT PRIMARY KEY (Id),
     FOREIGN KEY (PressName) REFERENCES Presses(Name),
 
     CONSTRAINT CK_BookNum CHECK (Num >= 0),

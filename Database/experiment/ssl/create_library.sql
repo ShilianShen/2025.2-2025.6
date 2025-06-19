@@ -1,5 +1,6 @@
 CREATE DATABASE Library
-    ON PRIMARY
+    ON
+    PRIMARY
     (   NAME = 'LibraryDat',
         FILENAME = 'D:\shilianshen\library_dat.mdf',
         SIZE = 10MB,
