@@ -1,4 +1,4 @@
-# 实验三
+# 实验三实验报告
 
 给定一个因果的连续LTI系统的微分方程$y''(t)+ay'(t)+25y(t)=x(t), a=\pm 1$.
 
@@ -9,19 +9,12 @@
 首先计算$H(s)$:
 
 $$
-y''(t)\pm y'(t)+25y(t)=x(t)
-$$
-
-$$
-s^2Y(s)\pm sY(s)+25Y(s)=X(s)
-$$
-
-$$
-H(s)=\frac{Y(s)}{X(s)}=\frac{1}{s^2\pm s+25}=\frac{1}{(s-\frac{\mp 1+j3\sqrt{11}}{2})(s-\frac{\mp 1-j3\sqrt{11}}{2})}
-$$
-
-$$
-H(s)=\frac{1}{j3\sqrt{11}}(\frac{1}{s-\frac{\mp 1+j3\sqrt{11}}{2}}+\frac{-1}{s-\frac{\mp 1-j3\sqrt{11}}{2}})
+\begin{matrix}
+y''(t)\pm y'(t)+25y(t)=x(t) \\
+s^2Y(s)\pm sY(s)+25Y(s)=X(s) \\
+H(s)=\frac{Y(s)}{X(s)}=\frac{1}{s^2\pm s+25}=\frac{1}{(s-\frac{\mp 1+j3\sqrt{11}}{2})(s-\frac{\mp 1-j3\sqrt{11}}{2})} \\
+所以H(s)=\frac{1}{j3\sqrt{11}}(\frac{1}{s-\frac{\mp 1+j3\sqrt{11}}{2}}-\frac{1}{s-\frac{\mp 1-j3\sqrt{11}}{2}})
+\end{matrix}
 $$
 
 可见$H(s)$有极点$\frac{\mp 1+j3\sqrt{11}}{2}, \frac{\mp 1-j3\sqrt{11}}{2}$, 分类讨论:
@@ -34,25 +27,20 @@ $$
 #### I 单位冲激响应
 
 $$
-h(t)*\delta(t) \leftrightarrow H(s) \cdot 1 = \frac{1}{s^2\pm s+25} = \frac{1}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}
-$$
-
-$$
+\begin{matrix}
+h(t)*\delta(t) \leftrightarrow H(s) \cdot 1 = \frac{1}{s^2\pm s+25} = \frac{1}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2} \\
 h(t)*\delta(t)= \frac2{3\sqrt{11}}e^{\mp\frac12t}\sin(\frac32\sqrt{11}t)u(t)
+\end{matrix}
 $$
 
 #### II 单位阶跃响应
 
 $$
-h(t)*u(t) \leftrightarrow H(s)\cdot\frac1s= \frac1s\cdot\frac{1}{s^2\pm s+25} = \frac1{25}(\frac1s-\frac{s\pm1}{s^2\pm s+25})
-$$
-
-$$
-H(s)= \frac1{25}(\frac1s-\frac{s\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}-\frac{\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2})
-$$
-
-$$
+\begin{matrix}
+h(t)*u(t) \leftrightarrow H(s)\cdot\frac1s= \frac1s\cdot\frac{1}{s^2\pm s+25} = \frac1{25}(\frac1s-\frac{s\pm1}{s^2\pm s+25}) \\
+H(s)= \frac1{25}(\frac1s-\frac{s\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}-\frac{\pm\frac12}{(s\pm\frac12)^2+(\frac32\sqrt{11})^2}) \\
 h(t)*u(t)= \frac1{25}(1-e^{\mp\frac12t}\cos(\frac32\sqrt{11}t)-e^{\mp\frac12t}\frac{\pm 1}{3\sqrt{11}}\sin(\frac32\sqrt{11}t))u(t)
+\end{matrix}
 $$
 
 ### (3) 求以上响应的初值和终值
@@ -123,7 +111,7 @@ grid on;
 
 ![](figure_2-1.png)
 
-### (3) 由仿真结果验证理论分析结论FUCK比较主观, 可以改改
+### (3) 由仿真结果验证理论分析结论
 
 由仿真结果可见,
 
@@ -133,7 +121,7 @@ $a=-1$时: 单位冲激响应初值为0, 终值发散; 单位阶跃响应初值�
 
 仿真结果和理论分析结论可以在极小误差范围内被认为一致, 同时a的取值也验证了系统的稳定性或不稳定性, 因此理论分析结论得到验证.
 
-### (4) 还有什么见解?FUCK太鸡把主观了, 必须改改
+### (4) 还有什么见解?
 
 这个LTI提供了一个终值定理的限制的例子, 即终值定理仅适用于稳定系统, 若系统有极点在虚轴或右半平面, 则终值定理失效. 这里$a=-1$时的$\lim_{t\rightarrow\infty}h*\delta(t)\neq\lim_{s\rightarrow0}sH(s)=\frac{1}{25}$.
 
